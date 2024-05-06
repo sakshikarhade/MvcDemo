@@ -57,7 +57,7 @@ namespace MvcDemo.Models
         }
         
 
-        public List <RegistrationModel>GetRegistrationList()
+        public List <RegistrationModel>Getlist()
         {
             
             
