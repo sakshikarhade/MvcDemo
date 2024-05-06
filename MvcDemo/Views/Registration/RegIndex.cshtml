@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "RegIndex";
+}
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Content/Registration.js"></script>
+
+<lable>Registration</lable></br></br>
+<input type="hidden" id="HdnName" />
+
+<lable><b>Name :-</b></lable><input type="text" id="txtName" placeholder="Enter name" style="width:500px" /></br></br>
+<lable><b>Mobile No :-</b></lable><input type="number" id="txtmobile_no" placeholder="Enter Mobile no" style="width:500px" /></br></br>
+
+<lable><b>City :-</b></lable><lable for="city"> SELECT CITY :</lable>
+<select name="city" id="city" style="width:200px">
+
+    <option value="">City</option>&nbsp;
+    <option value="Chandrapur">Chandrapur</option>&nbsp;
+    <option value="Nagpur">Nagpur</option>&nbsp;
+    <option value="Nashik">Nashik</option>&nbsp;
+    <option value="Pune">Pune</option>&nbsp;
+    <option value="Mumbai">Mumbai</option>&nbsp;
+
+</select><br/><br/>
+<lable><b>Address :-</b></lable><textarea typeof="text" id="txtAddress" placeholder="Enter your Address" style="width:500px">
+</textarea></br></br>
+
+<input type="button" value="submit" class="btn btn-outline-success" style="width:100px" onclick="Savereg()" /><br/><br/>
+
+<div class="table-responsive">
+    <table id="tblContact" class="table table-bordered table-hover table-striped table-responsive" style="width:100%;">
+        <thead class=" text-white bg-dark">
+            <tr>
+                <th>Srno</th>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Mobile_no</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div><br/>
+
+
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Pie Chart</h5>
+
+            <!-- Pie Chart -->
+            <canvas id="pieChart" style="max-height: 400px;"></canvas>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    new Chart(document.querySelector('#pieChart'), {
+                        type: 'pie',
+                        data: {
+                            labels: [
+                                'Red',
+                                'Blue',
+                                'Yellow'
+                            ],
+                            datasets: [{
+                                label: 'My First Dataset',
+                                data: [300, 50, 100],
+                                backgroundColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(54, 162, 235)',
+                                    'rgb(255, 205, 86)'
+                                ],
+                                hoverOffset: 4
+                            }]
+                        }
+                    });
+                });
+            </script>
+            <!-- End Pie CHart -->
+
+        </div>
+    </div>
+</div>
